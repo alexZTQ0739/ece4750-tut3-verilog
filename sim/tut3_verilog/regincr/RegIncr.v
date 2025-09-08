@@ -35,6 +35,12 @@ module tut3_verilog_regincr_RegIncr
   // combinational logic here to model the incrementer logic.
   // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
+  logic [7:0] temp_wire;
+  always_comb begin
+    temp_wire = reg_out + 1;
+  end
+  assign out = temp_wire;
+  
   // You will need to uncomment this when you explore line tracing.
   //
   // `ifndef SYNTHESIS
